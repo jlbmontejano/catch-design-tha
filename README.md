@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# Catch Design Take Home Assignment - GitHub Repositories Display
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A web application that displays GitHub repositories from the GitHub organization. Users can browse repositories with pagination, view key repository information including stars, forks, and language.
 
-Currently, two official plugins are available:
+<img width="2508" height="6196" alt="localhost_5173_" src="https://github.com/user-attachments/assets/3c8c55c7-b097-4009-a221-c8c46badc5bc" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+_Below is an example of how you can instruct your audience on installing and setting up your app._
 
-## React Compiler
+1. Clone the repo
+   ```sh
+   https://github.com/jlbmontejano/catch-design-tha.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the app
+   ```sh
+   npm run dev
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+* React 18
+* TypeScript
+* Tailwind CSS
+* Vite (build tool)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Future Improvements
+This web app was built with a focus on core functionality and minimal design, so there's room for optimization. Given more time, I would prioritize the following improvements:
+* **Mobile-first approach** - The current design is desktop-optimized. A mobile-first redesign would include responsive navigation and improved touch interactions
+* **Component refactoring** - Break down larger components into smaller, reusable pieces (e.g., dedicated `<Loading />` and `<ErrorMessage />` components)
+* **Enhanced UI/UX** - Improve visual feedback for loading and error states, add skeleton loaders, and refine the overall styling
+* **Performance optimization** - Implement caching, debouncing for user interactions, and lazy loading where applicable
