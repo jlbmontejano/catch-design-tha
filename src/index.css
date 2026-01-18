@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+li {
+	@apply list-disc list-inside;
+}
+
+button:hover {
+	@apply underline cursor-pointer;
+}
+
+button:disabled:hover {
+	@apply no-underline cursor-not-allowed;
+}
+
+a:hover {
+	@apply text-blue-700 underline cursor-pointer;
+}
